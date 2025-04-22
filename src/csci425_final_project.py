@@ -18,7 +18,7 @@ def standardization(data:list) -> list:
     # Split the data into x and y then split again to train and test variables
     X = data.iloc[:, :-1]
     y = data.iloc[:, -1]
-    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25)
+    X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.25, random_state=42)
 
     # Standarize X_train and X_test
     sc = StandardScaler()
